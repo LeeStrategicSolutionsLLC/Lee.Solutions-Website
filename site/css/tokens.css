@@ -1,0 +1,252 @@
+/* Lee Solutions — design tokens. Ported from the design-system token layer
+   (tokens/colors.css, semantic.css, typography.css, spacing.css, radius-line.css,
+   elevation.css, motion.css, fonts.css) with no changes to values. */
+
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap");
+
+:root{
+  /* Ink ramp */
+  --ink-1000:#0D1310;
+  --ink-900:#17201D;
+  --ink-800:#1E2825;
+  --ink-700:#2A342F;
+  --ink-600:#3A443F;
+  --ink-500:#5C6660;
+  --ink-400:#8A938D;
+
+  /* Sage ramp */
+  --sage-900:#39463D;
+  --sage-700:#4F6355;
+  --sage-600:#63795F;
+  --sage-500:#829B88;
+  --sage-300:#A8BCAC;
+  --sage-100:#DCE4DC;
+  --sage-050:#EDF1EC;
+
+  /* Champagne — atmospheric support only */
+  --champagne-700:#A8905F;
+  --champagne-500:#D8C6A5;
+  --champagne-300:#E7DCC6;
+  --champagne-100:#F1EADC;
+
+  /* Paper neutrals */
+  --ivory:#F5F4EE;
+  --ivory-raised:#FBFAF6;
+  --stone-500:#D8D9D1;
+  --stone-300:#E6E6E0;
+  --white:#FFFFFF;
+
+  /* Status — always paired with a label or icon, never color alone */
+  --status-ok:#4F6355;
+  --status-ok-surface:#EDF1EC;
+  --status-warn:#8A6A2F;
+  --status-warn-surface:#F5EBD8;
+  --status-stop:#8C3B2F;
+  --status-stop-surface:#F6E5E1;
+  --status-info:#3A5B63;
+  --status-info-surface:#E4EDEF;
+
+  /* One family. Instrument Sans — polished, contemporary, warm at text sizes. */
+  --font-sans:"Instrument Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display:var(--font-sans);
+  --font-text:var(--font-sans);
+  --font-mono:var(--font-sans);
+
+  --display-1:clamp(2.5rem, 5.6vw, 5.25rem);
+  --display-2:clamp(2.125rem, 4vw, 3.5rem);
+  --display-3:clamp(1.75rem, 2.6vw, 2.5rem);
+  --lh-display:1.04;
+  --ls-display:-0.035em;
+
+  --heading-1:2.125rem;
+  --heading-2:1.625rem;
+  --heading-3:1.1875rem;
+  --lh-heading:1.16;
+  --ls-heading:-0.022em;
+
+  --body-lg:1.1875rem;
+  --body-md:1.0625rem;
+  --body-sm:0.9375rem;
+  --lh-body:1.62;
+  --lh-body-tight:1.45;
+
+  --label-md:0.875rem;
+  --label-sm:0.8125rem;
+  --ls-label:0.055em;
+  --ls-label-tight:0.01em;
+
+  --numeral-lg:1.5rem;
+  --numeral-md:0.9375rem;
+
+  --weight-light:300;
+  --weight-regular:400;
+  --weight-medium:500;
+  --weight-semibold:600;
+  --weight-bold:700;
+
+  --measure-narrow:34ch;
+  --measure-text:60ch;
+  --measure-wide:74ch;
+
+  /* 4px base, editorial scale */
+  --space-0:0;
+  --space-1:4px;
+  --space-2:8px;
+  --space-3:12px;
+  --space-4:16px;
+  --space-5:24px;
+  --space-6:32px;
+  --space-7:48px;
+  --space-8:64px;
+  --space-9:96px;
+  --space-10:128px;
+  --space-11:160px;
+
+  --section-y-sm:56px;
+  --section-y-md:96px;
+  --section-y-lg:140px;
+
+  --grid-columns:12;
+  --grid-gutter:24px;
+  --grid-unit:8px;
+  --container-max:1280px;
+  --container-wide:1512px;
+  --gutter-desktop:64px;
+  --gutter-tablet:40px;
+  --gutter-mobile:22px;
+
+  --logo-clear:1em;
+  --logo-min-digital:96px;
+  --logo-min-print:22mm;
+
+  /* Radii — near-square. Print-like, precise. Nothing pill-shaped except tags/buttons. */
+  --radius-0:0px;
+  --radius-1:2px;
+  --radius-2:3px;
+  --radius-3:4px;
+  --radius-tag:999px;
+  --radius-card:2px;
+  --radius-action:999px;
+
+  --hairline:1px;
+  --rule-thin:1px;
+  --rule-medium:1.5px;
+  --rule-thick:2px;
+  --icon-stroke:1.5px;
+  --icon-stroke-large:1.25px;
+
+  --border-light:1px solid var(--stone-500);
+  --border-light-soft:1px solid var(--stone-300);
+  --border-dark:1px solid var(--ink-700);
+  --border-champagne:1px solid var(--champagne-500);
+  --border-sage:1px solid var(--sage-500);
+
+  --node-sm:4px;
+  --node-md:7px;
+  --node-lg:11px;
+  --connector-weight:1px;
+  --connector-weight-emphasis:1.5px;
+
+  --shadow-none:none;
+  --shadow-raise:0 1px 2px rgba(23,32,29,0.06);
+  --shadow-overlay:0 12px 32px -8px rgba(23,32,29,0.18), 0 2px 6px rgba(23,32,29,0.08);
+  --shadow-print:0 18px 44px -14px rgba(23,32,29,0.28);
+  --focus-ring:0 0 0 2px var(--ivory), 0 0 0 4px var(--sage-700);
+  --focus-ring-dark:0 0 0 2px var(--ink-900), 0 0 0 4px var(--champagne-500);
+
+  --dur-instant:90ms;
+  --dur-fast:160ms;
+  --dur-base:240ms;
+  --dur-slow:420ms;
+  --dur-draw:900ms;
+  --dur-draw-long:1600ms;
+
+  --ease-standard:cubic-bezier(0.2,0,0.2,1);
+  --ease-out:cubic-bezier(0.16,1,0.3,1);
+  --ease-in:cubic-bezier(0.4,0,1,1);
+
+  --hover-shift:1px;
+  --press-scale:0.995;
+
+  /* Light (default) surfaces */
+  --surface-page:var(--ivory);
+  --surface-card:var(--ivory-raised);
+  --surface-sunken:#EFEEE7;
+  --surface-field:var(--white);
+  --surface-field-alt:var(--champagne-100);
+  --surface-accent-soft:var(--sage-050);
+  --surface-inverse:var(--ink-900);
+
+  --text-display:var(--ink-900);
+  --text-heading:var(--ink-900);
+  --text-body:var(--ink-600);
+  --text-secondary:var(--ink-500);
+  --text-tertiary:var(--ink-400);
+  --text-accent:var(--sage-700);
+  --text-label:var(--ink-500);
+  --text-on-inverse:var(--ivory);
+  --text-on-accent:var(--ivory);
+
+  --line-default:var(--stone-500);
+  --line-soft:var(--stone-300);
+  --line-strong:var(--ink-900);
+  --line-accent:var(--sage-500);
+  --line-atmos:var(--champagne-500);
+
+  --action-primary-bg:var(--ink-900);
+  --action-primary-bg-hover:var(--ink-1000);
+  --action-primary-text:var(--ivory);
+  --action-secondary-border:var(--ink-900);
+  --action-secondary-text:var(--ink-900);
+  --action-secondary-bg-hover:var(--sage-050);
+  --action-accent-bg:var(--champagne-500);
+  --action-accent-bg-hover:var(--champagne-300);
+  --action-accent-text:var(--ink-900);
+  --action-disabled-bg:var(--stone-300);
+  --action-disabled-text:var(--ink-400);
+
+  --link-color:var(--sage-700);
+  --link-color-hover:var(--ink-900);
+
+  --diagram-node:var(--champagne-500);
+  --diagram-line:var(--sage-500);
+  --diagram-grid:var(--stone-300);
+}
+
+.on-ink{
+  --surface-page:var(--ink-900);
+  --surface-card:var(--ink-800);
+  --surface-sunken:var(--ink-1000);
+  --surface-field:var(--ink-800);
+  --surface-field-alt:var(--ink-800);
+  --surface-accent-soft:var(--ink-800);
+  --surface-inverse:var(--ivory);
+
+  --text-display:var(--ivory);
+  --text-heading:var(--ivory);
+  --text-body:#C9CFC9;
+  --text-secondary:#A3ABA5;
+  --text-tertiary:#7F8882;
+  --text-accent:var(--sage-500);
+  --text-label:var(--champagne-500);
+  --text-on-inverse:var(--ink-900);
+
+  --line-default:var(--ink-700);
+  --line-soft:#232D29;
+  --line-strong:var(--ivory);
+  --line-atmos:rgba(216,198,165,0.34);
+
+  --action-primary-bg:var(--champagne-500);
+  --action-primary-bg-hover:var(--champagne-300);
+  --action-primary-text:var(--ink-900);
+  --action-secondary-border:rgba(245,244,238,0.4);
+  --action-secondary-text:var(--ivory);
+  --action-secondary-bg-hover:rgba(245,244,238,0.07);
+  --action-disabled-bg:var(--ink-700);
+  --action-disabled-text:#6B746E;
+
+  --link-color:var(--sage-500);
+  --link-color-hover:var(--champagne-500);
+
+  --diagram-grid:rgba(216,198,165,0.16);
+}

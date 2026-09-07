@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Lee Solutions — 5x8 leave-behind (print)</title>
+<link rel="stylesheet" href="print.css">
+<style>
+@page{size:5.23622in 8.23622in;margin:0}
+.lb-bg-field{position:absolute;inset:0}
+</style>
+</head>
+<body>
+
+<!-- FRONT -->
+<div class="sheet lb-sheet lb-front">
+  <div class="lb-bg"></div>
+  <div class="lb-bg-field" aria-hidden="true" id="lb-ambient"></div>
+  <div class="lb-scrim" aria-hidden="true"></div>
+  <div class="trim lb-trim on-ink">
+    <span class="pw-wordmark ivory" aria-label="Lee Solutions">
+      <span class="top" style="font-size:16pt">LEE<span class="dot" style="width:0.05in;height:0.05in"></span></span>
+      <span class="bottom" style="font-size:6pt">SOLUTIONS</span>
+    </span>
+    <div>
+      <h1 class="ls-display lb-headline">Work can be challenging. Technology shouldn't be.</h1>
+      <p class="lb-lede">Software, workflow, and systems help for Kansas business owners.</p>
+    </div>
+    <div class="lb-location" aria-hidden="true"></div>
+  </div>
+</div>
+
+<!-- BACK -->
+<div class="sheet lb-sheet lb-back">
+  <div class="lb-back-bg"></div>
+  <div class="trim lb-back-trim">
+    <div>
+      <h2 class="lb-back-heading">How the work goes</h2>
+      <p class="lb-back-sub">Your workflow. Your people. Your technology. Your next practical step.</p>
+      <div class="lb-steps">
+        <div class="lb-step"><span class="num ls-numeral">01</span><div><div class="title">Listen</div><p>Time with the people closest to the work — learning what they see, need, and already know.</p></div></div>
+        <div class="lb-step"><span class="num ls-numeral">02</span><div><div class="title">Map</div><p>Understanding how the work moves today and where technology gets in the way.</p></div></div>
+        <div class="lb-step"><span class="num ls-numeral">03</span><div><div class="title">Design</div><p>Shaping an approach around your people, priorities, and business.</p></div></div>
+        <div class="lb-step"><span class="num ls-numeral">04</span><div><div class="title">Deliver</div><p>Putting a dependable solution in place with as little disruption as possible.</p></div></div>
+        <div class="lb-step"><span class="num ls-numeral">05</span><div><div class="title">Support</div><p>Reviewing the result, refining what needs it, and helping your team take ownership.</p></div></div>
+      </div>
+    </div>
+
+    <div class="lb-cta">
+      <div>
+        <div class="lb-cta-title">How can we help?</div>
+        <p>Have something you want to improve? Let's find the practical next step.</p>
+      </div>
+      <div class="qr-slot">
+        <div class="pad" style="padding:0.14in">
+          <img class="code" src="qr/lee-solutions-leave-behind-qr.svg" width="1.15in" height="1.15in" style="width:1.15in;height:1.15in;border:none" alt="QR code — lee.solutions/start">
+        </div>
+        <span class="caption" style="max-width:1.43in">See how Lee Solutions can help.</span>
+      </div>
+    </div>
+
+    <div class="lb-contacts">
+      <span>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--sage-700)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8.6 3.6H5.5A2 2 0 0 0 3.5 5.7c.5 7.2 7.6 14.3 14.8 14.8a2 2 0 0 0 2.2-2v-3.1l-4-1.5-2 2.5a15.6 15.6 0 0 1-5.9-5.9l2.5-2z"/></svg>
+        785-588-2253
+      </span>
+      <span>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--sage-700)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5.5" width="18" height="13" rx="1.5"/><path d="M3.6 7 12 13.4 20.4 7"/></svg>
+        engsean@lee.solutions
+      </span>
+      <span>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--sage-700)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s6.5-6.2 6.5-10.4a6.5 6.5 0 0 0-13 0C5.5 14.8 12 21 12 21z"/><circle cx="12" cy="10.4" r="2.2"/></svg>
+        Topeka, Kansas
+      </span>
+    </div>
+  </div>
+</div>
+
+<script src="../site/js/ambient-loop.js"></script>
+<script>renderAmbientLoop(document.getElementById('lb-ambient'), { paused: true, intensity: 0.9 });</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Lee;EngSean;;;
+FN:EngSean Lee
+ORG:Lee Solutions
+TITLE:Founder
+TEL;TYPE=WORK,VOICE:+17855882253
+EMAIL;TYPE=WORK,INTERNET:engsean@lee.solutions
+ADR;TYPE=WORK:;;;Topeka;KS;;USA
+URL:https://lee.solutions
+END:VCARD
