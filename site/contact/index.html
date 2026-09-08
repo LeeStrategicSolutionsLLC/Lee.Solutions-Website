@@ -114,7 +114,7 @@
               <p class="hint-mobile">We'll be in touch soon — typically within one business day.</p>
             </div>
           </form>
-          <div id="contact-confirmation" class="contact-confirmation" hidden tabindex="-1">
+          <div id="contact-confirmation" class="contact-confirmation" role="status" aria-live="polite" hidden tabindex="-1">
             <span class="lee-badge tone-ok">
               <svg class="lee-icon" width="13" height="13" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M8.2 12.3 10.9 15 15.9 9.2"/></svg>
               Message received
@@ -122,7 +122,7 @@
             <h3 style="font-size:22px;letter-spacing:-0.026em">Thanks — we've got it. You can typically expect a reply within one business day.</h3>
             <button type="button" id="contact-send-another" class="lee-btn variant-secondary">Send another</button>
           </div>
-          <div id="contact-error" class="contact-confirmation" hidden tabindex="-1">
+          <div id="contact-error" class="contact-confirmation" role="alert" aria-live="assertive" hidden tabindex="-1">
             <span class="lee-badge tone-stop">
               <svg class="lee-icon" width="13" height="13" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v5.5M12 16.3v.2"/></svg>
               Message not sent

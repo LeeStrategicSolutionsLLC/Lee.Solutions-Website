@@ -47,36 +47,80 @@
     var confirmation = document.getElementById('contact-confirmation');
     var errorState = document.getElementById('contact-error');
     var submitButtons = form.querySelectorAll('button[type="submit"]');
+    var requestTimeout = 15000;
+    var isSubmitting = false;
 
-    function setSubmitting(isSubmitting) {
+    /* Keep the form progressively enhanced: if the request APIs or the status
+       UI are unavailable, let the browser submit to Formspree normally. */
+    if (typeof window.fetch !== 'function' ||
+        typeof window.FormData !== 'function' ||
+        typeof window.AbortController !== 'function' ||
+        !confirmation || !errorState) return;
+
+    function setSubmitting(submitting) {
+      isSubmitting = submitting;
+      form.setAttribute('aria-busy', submitting ? 'true' : 'false');
       for (var i = 0; i < submitButtons.length; i++) {
-        submitButtons[i].disabled = isSubmitting;
+        submitButtons[i].disabled = submitting;
       }
     }
 
     form.addEventListener('submit', function (e) {
+      if (isSubmitting) {
+        e.preventDefault();
+        return;
+      }
+
+      var formData;
+      var controller;
+      try {
+        formData = new window.FormData(form);
+        controller = new window.AbortController();
+      } catch (error) {
+        /* Creating the request failed before we intercepted the submission,
+           so the browser can still perform the form's native POST. */
+        return;
+      }
+
       e.preventDefault();
       setSubmitting(true);
-      if (errorState) errorState.hidden = true;
+      errorState.hidden = true;
 
-      fetch(form.action, {
-        method: form.method || 'POST',
-        body: new FormData(form),
-        headers: { Accept: 'application/json' }
-      }).then(function (response) {
-        if (!response.ok) throw new Error('Form submission failed');
-        form.hidden = true;
-        if (confirmation) {
-          confirmation.hidden = false;
-          confirmation.focus();
-        }
-      }).catch(function () {
+      var timeoutId = window.setTimeout(function () {
+        controller.abort();
+      }, requestTimeout);
+
+      function showError() {
+        window.clearTimeout(timeoutId);
         setSubmitting(false);
-        if (errorState) {
-          errorState.hidden = false;
-          errorState.focus();
+        errorState.hidden = false;
+        errorState.focus();
+      }
+
+      var request;
+      try {
+        request = window.fetch(form.action, {
+          method: form.method || 'POST',
+          body: formData,
+          headers: { Accept: 'application/json' },
+          signal: controller.signal
+        });
+      } catch (error) {
+        showError();
+        return;
+      }
+
+      request.then(function (response) {
+        if (!response.ok) {
+          showError();
+          return;
         }
-      });
+        window.clearTimeout(timeoutId);
+        setSubmitting(false);
+        form.hidden = true;
+        confirmation.hidden = false;
+        confirmation.focus();
+      }, showError);
     });
 
     var again = document.getElementById('contact-send-another');
@@ -85,7 +129,8 @@
         form.reset();
         form.hidden = false;
         setSubmitting(false);
-        if (confirmation) confirmation.hidden = true;
+        confirmation.hidden = true;
+        errorState.hidden = true;
         var first = form.querySelector('input,textarea');
         if (first) first.focus();
       });
@@ -94,9 +139,12 @@
     var tryAgain = document.getElementById('contact-try-again');
     if (tryAgain) {
       tryAgain.addEventListener('click', function () {
-        if (errorState) errorState.hidden = true;
-        var first = form.querySelector('input,textarea');
-        if (first) first.focus();
+        errorState.hidden = true;
+        if (form.requestSubmit) {
+          form.requestSubmit();
+        } else if (submitButtons.length) {
+          submitButtons[0].click();
+        }
       });
     }
   }
