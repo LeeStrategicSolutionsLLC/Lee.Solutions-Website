@@ -38,20 +38,45 @@
     });
   }
 
-  /* Contact form — no backend in this hand-off, so submission shows the same
-     confirmation state the prototype used. Replace the fetch stub below with a
-     real endpoint (or a form service) when one is wired up. */
+  /* Contact form — submits to the Formspree endpoint set in the form's
+     action attribute. Swapping form services later only means changing
+     that action URL, nothing here. */
   function initContactForm() {
     var form = document.getElementById('contact-form');
     if (!form) return;
-    var card = form.closest('.contact-form');
     var confirmation = document.getElementById('contact-confirmation');
+    var errorState = document.getElementById('contact-error');
+    var submitButtons = form.querySelectorAll('button[type="submit"]');
+
+    function setSubmitting(isSubmitting) {
+      for (var i = 0; i < submitButtons.length; i++) {
+        submitButtons[i].disabled = isSubmitting;
+      }
+    }
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      form.hidden = true;
-      if (confirmation) confirmation.hidden = false;
-      if (confirmation) confirmation.focus();
+      setSubmitting(true);
+      if (errorState) errorState.hidden = true;
+
+      fetch(form.action, {
+        method: form.method || 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      }).then(function (response) {
+        if (!response.ok) throw new Error('Form submission failed');
+        form.hidden = true;
+        if (confirmation) {
+          confirmation.hidden = false;
+          confirmation.focus();
+        }
+      }).catch(function () {
+        setSubmitting(false);
+        if (errorState) {
+          errorState.hidden = false;
+          errorState.focus();
+        }
+      });
     });
 
     var again = document.getElementById('contact-send-another');
@@ -59,7 +84,17 @@
       again.addEventListener('click', function () {
         form.reset();
         form.hidden = false;
+        setSubmitting(false);
         if (confirmation) confirmation.hidden = true;
+        var first = form.querySelector('input,textarea');
+        if (first) first.focus();
+      });
+    }
+
+    var tryAgain = document.getElementById('contact-try-again');
+    if (tryAgain) {
+      tryAgain.addEventListener('click', function () {
+        if (errorState) errorState.hidden = true;
         var first = form.querySelector('input,textarea');
         if (first) first.focus();
       });

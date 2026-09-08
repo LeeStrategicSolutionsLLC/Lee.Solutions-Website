@@ -66,7 +66,8 @@
         </div>
 
         <div class="contact-form lee-form lee-rise" style="animation-delay:340ms">
-          <form id="contact-form">
+          <form id="contact-form" action="https://formspree.io/f/xaeypzwv" method="POST">
+            <input type="hidden" name="_subject" value="New inquiry from lee.solutions/contact">
             <div class="row-2">
               <div class="lee-field">
                 <label for="c-name">Your name</label>
@@ -102,7 +103,7 @@
             </div>
             <div class="submit-row-mobile">
               <label class="lee-checkbox">
-                <input type="checkbox" name="overview-m">
+                <input type="checkbox" name="overview">
                 <span class="box" aria-hidden="true"><svg class="lee-icon" viewBox="0 0 24 24"><path d="M4.5 12.5 9.5 17.5 20 7"/></svg></span>
                 <span class="label">Send the one-page overview of how the work goes</span>
               </label>
@@ -120,6 +121,14 @@
             </span>
             <h3 style="font-size:22px;letter-spacing:-0.026em">Thanks — we've got it. You can typically expect a reply within one business day.</h3>
             <button type="button" id="contact-send-another" class="lee-btn variant-secondary">Send another</button>
+          </div>
+          <div id="contact-error" class="contact-confirmation" hidden tabindex="-1">
+            <span class="lee-badge tone-stop">
+              <svg class="lee-icon" width="13" height="13" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v5.5M12 16.3v.2"/></svg>
+              Message not sent
+            </span>
+            <h3 style="font-size:22px;letter-spacing:-0.026em">Something went wrong on our end. Please try again, or reach us directly at <a href="tel:+17855882253">785-588-2253</a> or <a href="mailto:engsean@lee.solutions">engsean@lee.solutions</a>.</h3>
+            <button type="button" id="contact-try-again" class="lee-btn variant-secondary">Try again</button>
           </div>
         </div>
 
