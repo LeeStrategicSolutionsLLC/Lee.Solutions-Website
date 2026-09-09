@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title description">
+  <title id="title">Lee Solutions — Practical technology for Kansas businesses</title>
+  <desc id="description">Lee Solutions wordmark and message over the brand's dark green grid and connector pattern.</desc>
+  <defs>
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M30 0H0V30" fill="none" stroke="#D8C6A5" stroke-opacity="0.09" stroke-width="1"/>
+    </pattern>
+    <radialGradient id="scrim" cx="0" cy="0" r="1" gradientTransform="translate(436 330) rotate(90) scale(395 620)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0D1310" stop-opacity="0.82"/>
+      <stop offset="0.74" stop-color="#0D1310" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="#0D1310" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#17201D" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0D1310" stop-opacity="0.7"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="#17201D"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+
+  <g fill="none" stroke-linecap="round">
+    <path d="M-30 470C245 470 330 208 610 208S910 428 1230 428" stroke="#829B88" stroke-opacity="0.34"/>
+    <path d="M-30 142C205 142 292 372 565 372S900 164 1230 164" stroke="#829B88" stroke-opacity="0.26"/>
+    <path d="M410 660C410 496 625 446 775 446S955 286 955-30" stroke="#829B88" stroke-opacity="0.3"/>
+    <path d="M1230 550C970 550 902 316 660 316S332 96 128-30" stroke="#829B88" stroke-opacity="0.22"/>
+
+    <path d="M-30 470C245 470 330 208 610 208S910 428 1230 428" stroke="#D8C6A5" stroke-opacity="0.54" stroke-width="2" stroke-dasharray="118 590" stroke-dashoffset="-340"/>
+    <path d="M-30 142C205 142 292 372 565 372S900 164 1230 164" stroke="#D8C6A5" stroke-opacity="0.4" stroke-width="2" stroke-dasharray="62 646" stroke-dashoffset="-510"/>
+    <path d="M410 660C410 496 625 446 775 446S955 286 955-30" stroke="#829B88" stroke-opacity="0.58" stroke-width="2" stroke-dasharray="112 596" stroke-dashoffset="-210"/>
+  </g>
+
+  <g fill="#D8C6A5">
+    <rect x="950" y="99" width="10" height="10"/>
+    <rect x="1042" y="423" width="10" height="10"/>
+    <circle cx="887" cy="164" r="3.5"/>
+    <circle cx="708" cy="511" r="3"/>
+  </g>
+  <g fill="none" stroke="#D8C6A5" stroke-width="1.5">
+    <circle cx="610" cy="208" r="7"/>
+    <circle cx="565" cy="372" r="7"/>
+    <circle cx="775" cy="446" r="6.5"/>
+    <circle cx="660" cy="316" r="6.5"/>
+  </g>
+
+  <rect width="1200" height="630" fill="url(#scrim)"/>
+  <rect width="1200" height="630" fill="url(#edge)"/>
+
+  <g font-family="'Segoe UI', Arial, sans-serif">
+    <text x="78" y="86" fill="#F5F4EE" font-size="42" font-weight="700" letter-spacing="-1">LEE</text>
+    <rect x="157" y="55" width="10" height="10" fill="#D8C6A5"/>
+    <text x="80" y="115" fill="#F5F4EE" font-size="15" font-weight="600" letter-spacing="4.3">SOLUTIONS</text>
+
+    <rect x="80" y="190" width="42" height="3" fill="#D8C6A5"/>
+    <text x="78" y="274" fill="#F5F4EE" font-size="61" font-weight="700" letter-spacing="-2.2">Practical technology</text>
+    <text x="78" y="344" fill="#F5F4EE" font-size="61" font-weight="700" letter-spacing="-2.2">for Kansas businesses.</text>
+    <text x="82" y="414" fill="#C9CFC9" font-size="28" font-weight="400">Software, workflow, and systems help.</text>
+
+    <text x="82" y="550" fill="#D8C6A5" font-size="17" font-weight="600" letter-spacing="2.6">BASED IN TOPEKA, KANSAS</text>
+    <text x="1118" y="550" fill="#A3ABA5" font-size="18" font-weight="500" text-anchor="end">lee.solutions</text>
+  </g>
+</svg>
