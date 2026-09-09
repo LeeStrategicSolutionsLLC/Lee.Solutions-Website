@@ -216,14 +216,6 @@ button{font:inherit}
 .lee-input,.lee-textarea{font-family:var(--font-text);font-size:16px;line-height:1.5;color:var(--text-heading);background:var(--surface-field);border:1px solid var(--line-default);border-radius:var(--radius-1);padding:13px 14px;width:100%;outline:none;transition:border-color var(--dur-fast) var(--ease-standard),box-shadow var(--dur-fast) var(--ease-standard)}
 .lee-input:focus,.lee-textarea:focus{border-color:var(--sage-700);box-shadow:inset 0 0 0 1px var(--sage-700)}
 .lee-textarea{resize:vertical}
-.lee-checkbox{display:flex;gap:var(--space-3);align-items:flex-start;cursor:pointer;min-height:24px}
-.lee-checkbox input{position:absolute;opacity:0;width:1px;height:1px}
-.lee-checkbox .box{width:18px;height:18px;flex:none;margin-top:3px;border-radius:var(--radius-1);border:1px solid var(--line-default);background:var(--surface-field);color:var(--ivory);display:grid;place-items:center;transition:all var(--dur-fast) var(--ease-standard)}
-.lee-checkbox input:checked ~ .box{border-color:var(--ink-900);background:var(--ink-900)}
-.lee-checkbox .box .lee-icon{display:none;width:12px;height:12px}
-.lee-checkbox input:checked ~ .box .lee-icon{display:block}
-.lee-checkbox .label{font-size:var(--body-sm);line-height:1.5;color:var(--text-body)}
-.lee-checkbox input:focus-visible ~ .box{box-shadow:var(--focus-ring)}
 
 /* ============ Motion system ============ */
 @keyframes lee-rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
@@ -381,7 +373,7 @@ button{font:inherit}
   .contact-note{display:block;font-size:15px;line-height:1.55;color:var(--text-secondary);max-width:28ch;margin-top:var(--space-4);padding-top:var(--space-4);border-top:1px solid var(--line-soft)}
   .contact-form{max-width:none;padding:var(--space-7)}
   .contact-form .row-2{grid-template-columns:1fr 1fr}
-  .contact-form .submit-row{display:grid;grid-template-columns:1fr auto;gap:var(--space-5);align-items:center;margin-top:2px}
+  .contact-form .submit-row{display:flex;justify-content:flex-end;margin-top:2px}
   .contact-form .submit-row-mobile{display:none}
   .contact-form .hint-mobile{display:none}
 }
