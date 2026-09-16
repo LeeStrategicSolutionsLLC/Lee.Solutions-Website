@@ -248,7 +248,7 @@ button{font:inherit}
 
 /* ============ Brand field + brand line ============ */
 .lee-brand-line{margin:0 0 20px;font-family:var(--font-display);font-variation-settings:var(--fvs-display);font-weight:400;font-size:var(--brand-line-sm);letter-spacing:var(--ls-brand-line-sm);line-height:var(--lh-brand-line);text-transform:uppercase;color:var(--sage-400)}
-.lee-brand-line-dot{color:rgba(140,176,154,.45);padding:0 .35em}
+.lee-brand-line-dot{color:rgba(140,176,154,.45);padding:0 .15em}
 @media (min-width:900px){
   .lee-brand-line{font-size:var(--brand-line-md);letter-spacing:var(--ls-brand-line);margin-bottom:26px}
 }
