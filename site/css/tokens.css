@@ -19,6 +19,7 @@
   --sage-700:#4F6355;
   --sage-600:#63795F;
   --sage-500:#829B88;
+  --sage-400:#8CB09A;
   --sage-300:#A8BCAC;
   --sage-100:#DCE4DC;
   --sage-050:#EDF1EC;
@@ -26,6 +27,7 @@
   /* Champagne — atmospheric support only */
   --champagne-700:#A8905F;
   --champagne-500:#D8C6A5;
+  --champagne-400:#E2C48C;
   --champagne-300:#E7DCC6;
   --champagne-100:#F1EADC;
 
@@ -35,6 +37,18 @@
   --stone-500:#D8D9D1;
   --stone-300:#E6E6E0;
   --white:#FFFFFF;
+
+  /* The brand field (site/js/field-engine.js) reads these nine from the element it
+     mounts in, so any surface can re-point the whole ramp with a token override. */
+  --wave-shadow:#35483B;
+  --wave-dim:#526B59;
+  --wave-line:#758D79;
+  --wave-crest:#9FB194;
+  --wave-warm-shadow:#8E7548;
+  --wave-warm-dim:#A98D58;
+  --wave-light:#D5BD88;
+  --wave-warm-bright:#E2C48C;
+  --wave-core:#F2F1EA;
 
   /* Status — always paired with a label or icon, never color alone */
   --status-ok:#4F6355;

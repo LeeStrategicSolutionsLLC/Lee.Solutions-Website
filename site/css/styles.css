@@ -250,23 +250,12 @@ button{font:inherit}
 .lee-step:hover .lee-ico,.lee-step:focus-visible .lee-ico,.lee-step:focus .lee-ico{color:var(--sage-700);transform:translateY(-2px)}
 .lee-form input,.lee-form textarea{transition:border-color 180ms var(--ease-standard),box-shadow 180ms var(--ease-standard),background-color 180ms var(--ease-standard)}
 
-/* ============ Ambient loop ============ */
-.lee-amb{width:100%;height:100%;display:block}
-@keyframes lee-amb-drift{from{transform:translateX(0)}to{transform:translateX(-24px)}}
-@keyframes lee-amb-weight{0%,100%{opacity:1}38%{opacity:.58}72%{opacity:1.0}}
-@keyframes lee-amb-travel{from{stroke-dashoffset:0}to{stroke-dashoffset:-670}}
-@keyframes lee-amb-float-a{0%,100%{transform:translate(0,0)}34%{transform:translate(7px,-5px)}68%{transform:translate(-5px,4px)}}
-@keyframes lee-amb-float-b{0%,100%{transform:translate(0,0)}42%{transform:translate(-6px,6px)}76%{transform:translate(5px,2px)}}
-@keyframes lee-amb-depth{0%,100%{transform:scale(1);opacity:.34}50%{transform:scale(1.28);opacity:.9}}
-@media (prefers-reduced-motion:no-preference){
-  .lee-amb-grid{animation:lee-amb-drift 13s linear infinite}
-  .lee-amb-weight{animation:lee-amb-weight 13s ease-in-out infinite}
-  .lee-amb-travel{animation:lee-amb-travel 13s linear infinite}
-  .lee-amb-float-a{animation:lee-amb-float-a 13s ease-in-out infinite}
-  .lee-amb-float-b{animation:lee-amb-float-b 13s ease-in-out infinite}
-  .lee-amb-node{animation:lee-amb-depth 13s ease-in-out infinite}
+/* ============ Brand field + brand line ============ */
+.lee-brand-line{margin:0 0 20px;font-family:var(--font-mono);font-size:13px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--sage-400)}
+.lee-brand-line-dot{color:rgba(140,176,154,.45);padding:0 .35em}
+@media (min-width:900px){
+  .lee-brand-line{font-size:14px;margin-bottom:26px}
 }
-.lee-amb.paused .lee-amb-grid,.lee-amb.paused .lee-amb-weight,.lee-amb.paused .lee-amb-travel,.lee-amb.paused .lee-amb-float-a,.lee-amb.paused .lee-amb-float-b,.lee-amb.paused .lee-amb-node{animation-play-state:paused}
 
 /* ============ Closing CTA band ============ */
 .lee-closing{background:var(--champagne-100);padding:60px 0}
