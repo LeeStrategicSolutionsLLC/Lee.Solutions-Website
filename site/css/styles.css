@@ -47,7 +47,7 @@ button{font:inherit}
 }
 @media (min-width:1120px){
   .lee-container{padding:0 var(--gutter-desktop)}
-  .lee-screen{min-height:calc(100svh - 136px);padding:38px 0 42px}
+  .lee-screen{min-height:calc(100svh - 144px);padding:38px 0 42px}
 }
 @media (min-width:1120px) and (max-height:950px){
   .lee-screen{padding:22px 0 26px}
