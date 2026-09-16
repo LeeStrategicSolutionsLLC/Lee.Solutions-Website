@@ -16,7 +16,7 @@ img{max-width:100%;display:block}
 svg{display:block}
 button{font:inherit}
 
-.ls-display{font-family:var(--font-display);font-weight:var(--weight-bold);letter-spacing:var(--ls-display);line-height:var(--lh-display);color:var(--text-display);margin:0}
+.ls-display{font-family:var(--font-display);font-variation-settings:var(--fvs-display);font-weight:var(--weight-bold);font-size:var(--display-2);letter-spacing:var(--ls-display);line-height:var(--lh-display);color:var(--text-display);text-wrap:balance;margin:0}
 .ls-label{font-family:var(--font-text);font-size:var(--label-md);font-weight:var(--weight-medium);letter-spacing:var(--ls-label-tight);color:var(--text-label)}
 .ls-caps{font-family:var(--font-text);font-size:var(--label-sm);font-weight:var(--weight-semibold);letter-spacing:var(--ls-label);text-transform:uppercase;color:var(--text-label)}
 .ls-numeral{font-family:var(--font-text);font-weight:var(--weight-medium);font-variant-numeric:tabular-nums}
@@ -53,20 +53,13 @@ button{font:inherit}
   .lee-screen{padding:22px 0 26px}
 }
 
-/* ============ Wordmark ============ */
-.lee-wordmark{display:inline-flex;flex-direction:column;align-items:flex-start;gap:4px;font-family:var(--font-sans);line-height:1;text-decoration:none;color:var(--ink-900)}
-.lee-wordmark .lee-w-top{font-size:24px;font-weight:700;letter-spacing:-0.025em;display:inline-flex;align-items:center}
-.lee-wordmark .lee-w-bottom{font-size:9px;font-weight:600;letter-spacing:0.15em;margin-right:-0.15em}
-.lee-wordmark .lee-w-dot{display:inline-block;width:6px;height:6px;background:var(--sage-500);margin-left:2px}
-.lee-wordmark.tone-ivory{color:var(--ivory)}
-.lee-wordmark.tone-ivory .lee-w-dot{background:var(--champagne-500)}
-.lee-wordmark.size-sm .lee-w-top{font-size:20px}
-.lee-wordmark.size-sm .lee-w-bottom{font-size:7px}
-.lee-wordmark.size-lg .lee-w-top{font-size:26px}
-.lee-wordmark.size-lg .lee-w-bottom{font-size:9px}
-.lee-wordmark.size-xl .lee-w-top{font-size:36px}
-.lee-wordmark.size-xl .lee-w-bottom{font-size:13px}
-.lee-wordmark.size-xl{gap:6px}
+/* ============ Wordmark (cut-bar lockup) ============ */
+.lee-logo{display:block;width:108px;height:auto;color:var(--ivory)}
+.lee-logo.size-lg{width:190px}
+@media (min-width:1120px){
+  .lee-logo{width:136px}
+  .lee-logo.size-lg{width:220px}
+}
 
 /* ============ Icon ============ */
 .lee-icon{display:inline-block;flex:none;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
@@ -90,6 +83,7 @@ button{font:inherit}
 .lee-mobile-panel a{font-size:19px;font-weight:500;letter-spacing:-0.018em;text-decoration:none;display:flex;align-items:center;gap:12px;min-height:52px;padding-left:12px;border-bottom:1px solid var(--ink-800);color:var(--ivory)}
 .lee-mobile-panel a[aria-current="page"]{font-weight:600;padding-left:0;color:var(--champagne-500)}
 .lee-mobile-panel a[aria-current="page"]::before{content:"";width:3px;height:20px;background:var(--champagne-500)}
+.lee-mobile-panel a.lee-btn[aria-current="page"]{color:var(--action-primary-text)}
 .lee-mobile-panel .lee-btn{margin-top:var(--space-5)}
 
 @media (min-width:1120px){
@@ -132,13 +126,13 @@ button{font:inherit}
 .lee-link-arrow.size-sm{font-size:15px}
 
 /* ============ Badge ============ */
-.lee-badge{display:inline-flex;align-items:center;gap:6px;border-radius:var(--radius-1);padding:4px 9px;font-family:var(--font-sans);font-size:var(--label-sm);letter-spacing:var(--ls-label-tight);text-transform:uppercase;line-height:1.4;background:var(--surface-sunken);color:var(--ink-600);border:1px solid var(--stone-500)}
+.lee-badge{display:inline-flex;align-items:center;gap:6px;border-radius:var(--radius-1);padding:4px 9px;font-family:var(--font-mono);font-size:var(--label-mono);letter-spacing:var(--ls-label-mono);text-transform:uppercase;line-height:1.4;background:var(--surface-sunken);color:var(--ink-600);border:1px solid var(--stone-500)}
 .lee-badge.tone-ok{background:var(--status-ok-surface);color:var(--status-ok);border-color:#C6D3C6}
 .lee-badge.tone-info{background:transparent;color:var(--status-info);border:1px dashed #8FB0B7}
 .lee-badge.tone-stop{background:var(--status-stop-surface);color:var(--status-stop);border-color:#DAC3BC}
 
 /* ============ Eyebrow / node ============ */
-.lee-eyebrow{font-family:var(--font-sans);font-size:11px;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--text-accent)}
+.lee-eyebrow{font-family:var(--font-mono);font-size:var(--label-mono);font-weight:400;letter-spacing:var(--ls-label-mono);text-transform:uppercase;color:var(--text-accent)}
 .lee-eyebrow.tone-atmos{color:var(--champagne-500)}
 .lee-node-dot{display:block;width:9px;height:9px;background:var(--champagne-500);box-shadow:0 0 0 4px var(--ivory)}
 .tone-raised .lee-node-dot,.tone-champagne .lee-node-dot{box-shadow:0 0 0 4px var(--ivory-raised)}
@@ -211,7 +205,7 @@ button{font:inherit}
 
 /* ============ Forms ============ */
 .lee-field{display:flex;flex-direction:column;gap:var(--space-2)}
-.lee-field label{font-family:var(--font-sans);font-size:var(--label-sm);letter-spacing:var(--ls-label);text-transform:uppercase;color:var(--text-label)}
+.lee-field label{font-family:var(--font-mono);font-size:var(--label-mono);letter-spacing:var(--ls-label-mono);text-transform:uppercase;color:var(--text-label)}
 .lee-field .hint{font-size:var(--body-sm);line-height:1.45;color:var(--text-secondary)}
 .lee-input,.lee-textarea{font-family:var(--font-text);font-size:16px;line-height:1.5;color:var(--text-heading);background:var(--surface-field);border:1px solid var(--line-default);border-radius:var(--radius-1);padding:13px 14px;width:100%;outline:none;transition:border-color var(--dur-fast) var(--ease-standard),box-shadow var(--dur-fast) var(--ease-standard)}
 .lee-input:focus,.lee-textarea:focus{border-color:var(--sage-700);box-shadow:inset 0 0 0 1px var(--sage-700)}
@@ -251,10 +245,10 @@ button{font:inherit}
 .lee-form input,.lee-form textarea{transition:border-color 180ms var(--ease-standard),box-shadow 180ms var(--ease-standard),background-color 180ms var(--ease-standard)}
 
 /* ============ Brand field + brand line ============ */
-.lee-brand-line{margin:0 0 20px;font-family:var(--font-mono);font-size:13px;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--sage-400)}
+.lee-brand-line{margin:0 0 20px;font-family:var(--font-display);font-variation-settings:var(--fvs-display);font-weight:400;font-size:var(--brand-line-sm);letter-spacing:var(--ls-brand-line-sm);line-height:var(--lh-brand-line);text-transform:uppercase;color:var(--sage-400)}
 .lee-brand-line-dot{color:rgba(140,176,154,.45);padding:0 .35em}
 @media (min-width:900px){
-  .lee-brand-line{font-size:14px;margin-bottom:26px}
+  .lee-brand-line{font-size:var(--brand-line-md);letter-spacing:var(--ls-brand-line);margin-bottom:26px}
 }
 
 /* ============ Closing CTA band ============ */
@@ -384,7 +378,7 @@ button{font:inherit}
 .story-card{background:var(--ivory-raised);padding:var(--space-6);display:grid;gap:var(--space-4);align-content:start}
 .story-card .head{display:flex;align-items:center;justify-content:space-between;gap:var(--space-4)}
 .story-slot{display:grid;gap:5px}
-.story-slot .label{font-family:var(--font-sans);font-size:10px;line-height:1.2;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-accent)}
+.story-slot .label{font-family:var(--font-mono);font-size:var(--label-mono);line-height:1.2;letter-spacing:var(--ls-label-mono);text-transform:uppercase;color:var(--text-accent)}
 .story-slot .hint-box{border:1px dashed var(--line-strong);background:var(--ivory);padding:8px 11px;min-height:31px;display:grid;align-content:center}
 .story-slot .hint-box span{font-size:12.5px;line-height:1.4;color:var(--text-tertiary);text-wrap:pretty}
 .story-open{display:flex;justify-content:flex-end;margin-top:2px}

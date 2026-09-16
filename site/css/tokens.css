@@ -1,11 +1,14 @@
 /* Lee Solutions — design tokens. Ported from the design-system token layer
    (tokens/colors.css, semantic.css, typography.css, spacing.css, radius-line.css,
-   elevation.css, motion.css, fonts.css) with no changes to values. */
+   elevation.css, motion.css, fonts.css). Synced 2026-09-16 for the Archivo/Space Mono
+   type system, the geometric cut-bar wordmark, and the extended ink/brand-line tokens. */
 
-@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,300..700&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Space+Mono:wght@400;700&display=swap");
 
 :root{
   /* Ink ramp */
+  --ink-1200:#030706;
+  --ink-1100:#0B100D;
   --ink-1000:#0D1310;
   --ink-900:#17201D;
   --ink-800:#1E2825;
@@ -60,11 +63,18 @@
   --status-info:#3A5B63;
   --status-info-surface:#E4EDEF;
 
-  /* One family. Instrument Sans — polished, contemporary, warm at text sizes. */
+  /* Body and UI. Instrument Sans — polished, contemporary, warm at text sizes. */
   --font-sans:"Instrument Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-display:var(--font-sans);
   --font-text:var(--font-sans);
-  --font-mono:var(--font-sans);
+
+  /* Display and brand lines. Archivo, held at width 112 — architectural and wide.
+     Always set --fvs-display with it, or the width axis falls back to normal. */
+  --font-display:"Archivo", "Instrument Sans", ui-sans-serif, system-ui, sans-serif;
+  --fvs-display:"wdth" 112;
+
+  /* Labels and metadata only — eyebrows, field labels, badges, story fields. Never a
+     headline, never body copy. Space Mono — restrained and technical. */
+  --font-mono:"Space Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 
   --display-1:clamp(2.5rem, 5.6vw, 5.25rem);
   --display-2:clamp(2.125rem, 4vw, 3.5rem);
@@ -84,10 +94,22 @@
   --lh-body:1.62;
   --lh-body-tight:1.45;
 
+  /* Brand lines — uppercase, widely tracked, Archivo. Sanctioned for the messaging
+     line only (People · Processes · Possibilities). Never headings, body, nav or buttons. */
+  --brand-line-lg:1.375rem;
+  --brand-line-md:1.125rem;
+  --brand-line-sm:0.8125rem;
+  --ls-brand-line:0.32em;
+  --ls-brand-line-sm:0.22em;
+  --lh-brand-line:1.6;
+
   --label-md:0.875rem;
   --label-sm:0.8125rem;
   --ls-label:0.055em;
   --ls-label-tight:0.01em;
+  /* Mono metadata labels — the one small uppercase treatment. 13px is the floor. */
+  --label-mono:0.8125rem;
+  --ls-label-mono:0.14em;
 
   --numeral-lg:1.5rem;
   --numeral-md:0.9375rem;
@@ -127,7 +149,7 @@
   --container-wide:1512px;
   --gutter-desktop:64px;
   --gutter-tablet:40px;
-  --gutter-mobile:22px;
+  --gutter-mobile:20px;
 
   --logo-clear:1em;
   --logo-min-digital:96px;
