@@ -46,17 +46,30 @@
   <rect width="1200" height="630" fill="url(#scrim)"/>
   <rect width="1200" height="630" fill="url(#edge)"/>
 
-  <g font-family="'Segoe UI', Arial, sans-serif">
-    <text x="78" y="86" fill="#F5F4EE" font-size="42" font-weight="700" letter-spacing="-1">LEE</text>
-    <rect x="157" y="55" width="10" height="10" fill="#D8C6A5"/>
-    <text x="80" y="115" fill="#F5F4EE" font-size="15" font-weight="600" letter-spacing="4.3">SOLUTIONS</text>
+  <!-- Cut-bar wordmark, matching components/brand/Wordmark.jsx -->
+  <g transform="translate(78,38) scale(0.4)">
+    <g fill="#F5F4EE">
+      <rect x="0" y="0" width="9" height="100"/>
+      <rect x="0" y="91" width="100" height="9"/>
+      <rect x="204" y="0" width="104" height="9"/>
+      <rect x="204" y="45" width="86" height="9"/>
+      <rect x="204" y="45" width="9" height="55"/>
+      <rect x="204" y="91" width="104" height="9"/>
+      <rect x="414" y="0" width="104" height="9"/>
+      <rect x="414" y="45" width="86" height="9"/>
+      <rect x="414" y="45" width="9" height="55"/>
+      <rect x="414" y="91" width="104" height="9"/>
+    </g>
+    <text x="0" y="179.6" textLength="518" lengthAdjust="spacing" font-family="Archivo" font-variation-settings="'wdth' 112" font-weight="300" font-size="41.6" fill="#F5F4EE">SOLUTIONS</text>
+  </g>
 
+  <g>
     <rect x="80" y="190" width="42" height="3" fill="#D8C6A5"/>
-    <text x="78" y="274" fill="#F5F4EE" font-size="61" font-weight="700" letter-spacing="-2.2">Practical technology</text>
-    <text x="78" y="344" fill="#F5F4EE" font-size="61" font-weight="700" letter-spacing="-2.2">for Kansas businesses.</text>
-    <text x="82" y="414" fill="#C9CFC9" font-size="28" font-weight="400">Software, workflow, and systems help.</text>
+    <text x="78" y="274" fill="#F5F4EE" font-family="Archivo" font-variation-settings="'wdth' 112" font-size="61" font-weight="700" letter-spacing="-2.2">Practical technology</text>
+    <text x="78" y="344" fill="#F5F4EE" font-family="Archivo" font-variation-settings="'wdth' 112" font-size="61" font-weight="700" letter-spacing="-2.2">for Kansas businesses.</text>
+    <text x="82" y="414" fill="#C9CFC9" font-family="Instrument Sans" font-size="28" font-weight="400">Software, workflow, and systems help.</text>
 
-    <text x="82" y="550" fill="#D8C6A5" font-size="17" font-weight="600" letter-spacing="2.6">BASED IN TOPEKA, KANSAS</text>
-    <text x="1118" y="550" fill="#A3ABA5" font-size="18" font-weight="500" text-anchor="end">lee.solutions</text>
+    <text x="82" y="550" fill="#D8C6A5" font-family="Space Mono" font-size="16" font-weight="400" letter-spacing="2.6">BASED IN TOPEKA, KANSAS</text>
+    <text x="1118" y="550" fill="#A3ABA5" font-family="Instrument Sans" font-size="18" font-weight="500" text-anchor="end">lee.solutions</text>
   </g>
 </svg>
