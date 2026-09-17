@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 120" role="img" aria-label="Lee Solutions">
-<rect width="220" height="120" fill="#0B100D"/>
-<g fill="none" stroke="#F5F4EE" stroke-width="9" stroke-linecap="butt">
-<path d="M21.5 10V105.5H95"/>
-<path d="M198 36.5V14.5H132.5V55.5H198V105.5H132.5V83.5"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Lee Solutions">
+<rect width="128" height="128" fill="#0B100D"/>
+<g fill="none" stroke="#F5F4EE" stroke-width="13" stroke-linecap="butt" stroke-linejoin="miter">
+<path d="M20 18V104H62"/>
+<path d="M118 39V18H72V57H118V104H72V83"/>
 </g>
-<rect x="109" y="55" width="10" height="10" fill="#E2C48C"/>
+<rect x="61.5" y="51.5" width="11" height="11" fill="#E2C48C"/>
 </svg>
