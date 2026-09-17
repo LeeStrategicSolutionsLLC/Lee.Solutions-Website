@@ -1,5 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Lee Solutions">
-<rect width="32" height="32" fill="#0B100D"/>
-<g fill="#F5F4EE"><rect x="6" y="6" width="3" height="20"/><rect x="6" y="23" width="20" height="3"/></g>
-<rect x="23" y="5" width="4" height="4" fill="#E2C48C"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 120" role="img" aria-label="Lee Solutions">
+<rect width="220" height="120" fill="#0B100D"/>
+<g fill="none" stroke="#F5F4EE" stroke-width="9" stroke-linecap="butt">
+<path d="M21.5 10V105.5H95"/>
+<path d="M198 36.5V14.5H132.5V55.5H198V105.5H132.5V83.5"/>
+</g>
+<rect x="109" y="55" width="10" height="10" fill="#E2C48C"/>
 </svg>
