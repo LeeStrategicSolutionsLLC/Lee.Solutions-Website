@@ -156,6 +156,8 @@ button{font:inherit}
 .lee-photo.tone-ink{background:var(--ink-800)}
 .lee-photo span{font-size:13px;font-weight:500;letter-spacing:-0.004em;color:var(--ink-500)}
 .lee-photo.tone-ink span{color:var(--champagne-500)}
+.lee-photo.has-image{padding:0;position:relative}
+.lee-photo.has-image img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 12%;display:block}
 
 /* ============ Hero (Home) ============ */
 .lee-hero{background:var(--ink-900);position:relative;overflow:hidden;min-height:600px;display:flex;flex-direction:column}
